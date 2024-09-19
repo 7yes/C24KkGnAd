@@ -3,12 +3,13 @@
 package com.jesse.c24kkgnad
 
 fun main() {
-    fAdd(1, 2)
-    fAdd2(b = 2)
-    fAdd3(2, 3)
-    println(fAdd4(3, 4))
-    fWhen(5)
-    fList()
+//    fAdd(1, 2)
+//    fAdd2(b = 2)
+//    fAdd3(2, 3)
+//    println(fAdd4(3, 4))
+//    fWhen(5)
+//    fList()
+    fListAdd()
 }
 
 fun fAdd(a: Int, b: Int) {
@@ -60,4 +61,46 @@ fun fList() {
     println(varMutableList)//[Ellen, b, c]
     varMutableList = mutableListOf("Gemma", "Harry")
     println(varMutableList)//[Gemma, Harry]
+
+    valMutableList.add("GG")
+    varMutableList.add("HH")
+    println(valMutableList)//[Ellen, b, c, GG]
+    println(varMutableList)//[Gemma, Harry, HH]
+    valMutableList.addAll(varMutableList)
+    println(valMutableList)//[Ellen, b, c, GG, Gemma, Harry, HH
+    valMutableList.removeAt(0)
+    println(valMutableList)//[b, c, GG, Gemma, Harry, HH]
+    varMutableList.remove("Harry")
+    println(varMutableList)//[Gemma, HH]
+    valMutableList.removeAll(varMutableList)
+    println(valMutableList)//[b, c, GG, Gemma]
+    valMutableList.clear()
+    varMutableList.clear()
+    println(valMutableList)//[]
+    valMutableList.add("a")
+    valMutableList.add("b")
+    varMutableList = mutableListOf("b", "c", "d")
+    println(valMutableList)//[a, b]
+    println(varMutableList)//[b, c, d]
+    valMutableList.retainAll(varMutableList)
+    println(valMutableList)//[b]
+    valMutableList.remove("a")
+    println(varMutableList)//[b, c, d]
+    valMutableList.addAll(varMutableList)
+    println(valMutableList)//[a, b, b, c, d]
+    valMutableList.removeAll(varMutableList)
+    println(valMutableList)//[a]
+    valMutableList.forEach { println(it) }
+    valMutableList.filter { it == "b"
+    }.forEach { println(it) }
+}
+
+fun fListAdd(){
+    val diasSemana = listOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
+    val emptyDays = mutableListOf<String>()
+    diasSemana.forEach {
+        emptyDays.add(it+"Bl")
+    }
+    println(diasSemana)
+    println(emptyDays)
 }
