@@ -9,7 +9,7 @@ fun main() {
 //    println(fAdd4(3, 4))
 //    fWhen(5)
 //    fList()
-    fListAdd()
+    //fListAdd()
 }
 
 fun fAdd(a: Int, b: Int) {
