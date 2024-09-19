@@ -1,3 +1,5 @@
+@file:Suppress("MagicNumber")
+
 package com.jesse.c24kkgnad
 
 fun main() {
@@ -52,7 +54,7 @@ fun fList() {
     println(valMutableList) //[a, Dart, Carl, c, Ketty]
     val removedC = valMutableList.remove("c")
     println(valMutableList)//[a, Dart, Carl, Ketty]
-
+    println("isB: $isB removedC: $removedC")
     var varMutableList = mutableListOf("a", "b", "c")
     varMutableList[0] = "Ellen"
     println(varMutableList)//[Ellen, b, c]
