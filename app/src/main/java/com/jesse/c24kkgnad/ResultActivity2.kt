@@ -21,5 +21,12 @@ class ResultActivity2 : AppCompatActivity() {
             insets
         }
         binding.btnBack.setOnClickListener { onBackPressed() }
+        getAndShowName()
+    }
+
+    fun getAndShowName(){
+        val bundle = intent.extras
+        val name = bundle?.getString("NAME_KEY")
+        binding.tvName.text = "Hola $name"
     }
 }

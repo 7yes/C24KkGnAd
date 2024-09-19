@@ -1,5 +1,6 @@
 package com.jesse.c24kkgnad
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -23,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnClick.setOnClickListener {
             val validInput = checkValue(binding.tvName.text.toString())
-          //  if(validInput)
+            if(validInput){
+                val intent = Intent(this, ResultActivity2::class.java)
+                intent.putExtra("NAME_KEY", binding.tvName.text.toString())
+                startActivity(intent)
+            }
         }
     }
 
