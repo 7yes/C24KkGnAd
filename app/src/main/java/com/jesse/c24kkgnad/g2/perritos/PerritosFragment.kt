@@ -44,6 +44,7 @@ class PerritosFragment : Fragment() {
         binding.rv.layoutManager = LinearLayoutManager(requireContext())
         binding.rv.adapter = adapter
     }
+
     override fun onStart() {
         super.onStart()
         searchByName("hound")
@@ -63,7 +64,7 @@ class PerritosFragment : Fragment() {
                     adapter.notifyDataSetChanged()
                 }
             } else {
-                 showError()
+                showError()
             }
         }
     }
@@ -83,6 +84,7 @@ class PerritosFragment : Fragment() {
         @GET
         suspend fun getDogsByBreed(@Url url: String): Response<ResponseDogs>
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
