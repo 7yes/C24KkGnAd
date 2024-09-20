@@ -1,4 +1,4 @@
-package com.jesse.c24kkgnad
+package com.jesse.c24kkgnad.g1
 
 import android.os.Bundle
 import android.view.LayoutInflater

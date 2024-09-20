@@ -27,6 +27,9 @@ class HomeFragment : Fragment() {
         binding.lyoFrame.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutFrameFragment) }
         binding.lyoLinear.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutLInearFragment) }
         binding.lyoConstrain.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutCoinstrainFragment) }
+        binding.dayPicker.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_dayPickerFragment) }
+        binding.timePicker.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_timePickerFragment) }
+        binding.perritos.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_perritosFragment) }
     }
 
     override fun onDestroyView() {

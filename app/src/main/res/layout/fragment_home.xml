@@ -23,6 +23,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintEnd_toStartOf="@id/lyoLinear"
+        app:layout_constraintBottom_toTopOf="@id/dayPicker"
         />
     <Button
         android:id="@+id/lyoLinear"
@@ -30,8 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/lyoFrame"
-        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintTop_toTopOf="@id/lyoFrame"
         app:layout_constraintEnd_toStartOf="@id/lyoConstrain"
+        app:layout_constraintBottom_toBottomOf="@id/lyoFrame"
         />
     <Button
         android:id="@+id/lyoConstrain"
@@ -39,9 +42,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/lyoLinear"
-        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintTop_toTopOf="@id/lyoFrame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/lyoFrame"
         />
-
+    <Button
+        android:id="@+id/dayPicker"
+        android:text="Day Picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/lyoFrame"
+        app:layout_constraintTop_toBottomOf="@id/lyoFrame"
+        app:layout_constraintEnd_toStartOf="@id/timePicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/timePicker"
+        android:text="Time Picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/dayPicker"
+        app:layout_constraintTop_toTopOf="@id/dayPicker"
+        app:layout_constraintEnd_toStartOf="@id/perritos"
+        app:layout_constraintBottom_toBottomOf="@id/dayPicker"
+        />
+    <Button
+        android:id="@+id/perritos"
+        android:text="Perritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/timePicker"
+        app:layout_constraintTop_toTopOf="@id/dayPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/dayPicker"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

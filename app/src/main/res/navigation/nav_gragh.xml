@@ -24,20 +24,44 @@
         <action
             android:id="@+id/action_homeFragment_to_layoutLInearFragment"
             app:destination="@id/layoutLInearFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_perritosFragment"
+            app:destination="@id/perritosFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dayPickerFragment"
+            app:destination="@id/dayPickerFragment" />
     </fragment>
     <fragment
         android:id="@+id/layoutCoinstrainFragment"
-        android:name="com.jesse.c24kkgnad.LayoutCoinstrainFragment"
+        android:name="com.jesse.c24kkgnad.g1.LayoutCoinstrainFragment"
         android:label="fragment_layout_coinstrain"
         tools:layout="@layout/fragment_layout_coinstrain" />
     <fragment
         android:id="@+id/layoutFrameFragment"
-        android:name="com.jesse.c24kkgnad.LayoutFrameFragment"
+        android:name="com.jesse.c24kkgnad.g1.LayoutFrameFragment"
         android:label="fragment_layout_frame"
         tools:layout="@layout/fragment_layout_frame" />
     <fragment
         android:id="@+id/layoutLInearFragment"
-        android:name="com.jesse.c24kkgnad.LayoutLInearFragment"
+        android:name="com.jesse.c24kkgnad.g1.LayoutLInearFragment"
         android:label="fragment_layout_l_inear"
         tools:layout="@layout/fragment_layout_l_inear" />
+    <fragment
+        android:id="@+id/dayPickerFragment"
+        android:name="com.jesse.c24kkgnad.g2.DayPickerFragment"
+        android:label="fragment_day_picker"
+        tools:layout="@layout/fragment_day_picker" />
+    <fragment
+        android:id="@+id/perritosFragment"
+        android:name="com.jesse.c24kkgnad.g2.PerritosFragment"
+        android:label="fragment_perritos"
+        tools:layout="@layout/fragment_perritos" />
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.jesse.c24kkgnad.g2.TimePickerFragment"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" />
 </navigation>
