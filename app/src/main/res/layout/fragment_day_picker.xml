@@ -5,10 +5,22 @@
     android:layout_height="match_parent"
     tools:context=".g2.DayPickerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        style="@style/mySubTitleStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="Day Picker" />
+    <EditText
+        android:id="@+id/et_day"
+        style="@style/mySubTitleStyle"
+        android:paddingVertical="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Day"
+        android:clickable="false"
+        android:focusable="false"/>
 
 </FrameLayout>
