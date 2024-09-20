@@ -20,7 +20,7 @@ import retrofit2.http.GET
 import retrofit2.http.Url
 
 @AndroidEntryPoint
-class PerritosFragment : Fragment() {
+class PerritosFragment : Fragment(), android.widget.SearchView.OnQueryTextListener {
 
     private var _binding: FragmentPerritosBinding? = null
     private val binding get() = _binding!!
@@ -33,7 +33,7 @@ class PerritosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPerritosBinding.inflate(layoutInflater, container, false)
-
+        binding.svSearch.setOnQueryTextListener(this)
         initRV()
 
         return binding.root
@@ -70,7 +70,9 @@ class PerritosFragment : Fragment() {
     }
 
     private fun showError() {
-        toast("Ha ocurrido un error")
+        activity?.runOnUiThread {
+            toast("Ha ocurrido un error")
+        }
     }
 
     fun getRetrofit(): Retrofit {
@@ -88,6 +90,17 @@ class PerritosFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if (!query.isNullOrEmpty()) {
+            searchByName(query.lowercase())
+        }
+        return true
+    }
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+        return true
     }
 }
 
