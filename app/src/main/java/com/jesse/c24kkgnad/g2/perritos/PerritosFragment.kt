@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jesse.c24kkgnad.databinding.FragmentPerritosBinding
+import com.jesse.c24kkgnad.toast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -22,15 +24,26 @@ class PerritosFragment : Fragment() {
 
     private var _binding: FragmentPerritosBinding? = null
     private val binding get() = _binding!!
+    private lateinit var adapter: DogsAdapter
+    private var listAdapter: MutableList<String> = mutableListOf<String>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPerritosBinding.inflate(layoutInflater, container, false)
+
+        initRV()
+
         return binding.root
     }
 
+    private fun initRV() {
+        adapter = DogsAdapter(listAdapter)
+        binding.rv.layoutManager = LinearLayoutManager(requireContext())
+        binding.rv.adapter = adapter
+    }
     override fun onStart() {
         super.onStart()
         searchByName("hound")
@@ -41,16 +54,24 @@ class PerritosFragment : Fragment() {
             val call = getRetrofit().create(PerritosAPI::class.java).getDogsByBreed("$query/images")
             val puppies = call.body()
             Log.d("TAG", "searchByName: $call")
-            Log.d("TAG", "searchByName: $puppies")
             if (call.isSuccessful) {
                 val images = puppies?.images ?: emptyList()
                 Log.d("TAG", "searchByName: $images")
-                // binding.rvDogs.adapter = PerritosAdapter(images)
+                listAdapter.clear()
+                listAdapter.addAll(images)
+                activity?.runOnUiThread {
+                    adapter.notifyDataSetChanged()
+                }
             } else {
-                // showError()
+                 showError()
             }
         }
     }
+
+    private fun showError() {
+        toast("Ha ocurrido un error")
+    }
+
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://dog.ceo/api/breed/")
