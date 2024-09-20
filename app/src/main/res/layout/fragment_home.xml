@@ -23,6 +23,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideTop"
         />
+    <Button
+        android:id="@+id/lyoLinear"
+        android:text="LYO Linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lyoFrame"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintEnd_toStartOf="@id/lyoConstrain"
+        />
+    <Button
+        android:id="@+id/lyoConstrain"
+        android:text="LYO Constrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lyoLinear"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

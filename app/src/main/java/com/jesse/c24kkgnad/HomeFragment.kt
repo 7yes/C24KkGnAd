@@ -25,6 +25,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lyoFrame.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutFrameFragment) }
+        binding.lyoLinear.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutLInearFragment) }
+        binding.lyoConstrain.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutCoinstrainFragment) }
     }
 
     override fun onDestroyView() {
