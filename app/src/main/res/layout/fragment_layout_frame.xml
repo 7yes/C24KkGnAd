@@ -5,10 +5,50 @@
     android:layout_height="match_parent"
     tools:context=".LayoutFrameFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <View
+        android:layout_gravity="start"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/purple"/>
+    <View
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/teal_200"/>
+    <View
+        android:layout_gravity="end"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/black"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/teal_200"/>
+    <View
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/black"/>
+    <View
+        android:layout_gravity="center_vertical|end"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/purple"/>
+    <View
+        android:layout_gravity="bottom"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/teal_700"/>
+    <View
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/blue"/>
+    <View
+        android:layout_gravity="bottom|end"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/yellow"/>
 
 </FrameLayout>
