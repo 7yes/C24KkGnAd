@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.jesse.c24kkgnad.databinding.FragmentHomeBinding
@@ -24,7 +25,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.lyoFrame.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutFrameFragment) }
+        binding.lyoFrame.apply {
+            val font = ResourcesCompat.getFont(requireContext(), R.font.fascinate_inline_regular)
+            typeface = font
+        }
+            .setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutFrameFragment) }
         binding.lyoLinear.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutLInearFragment) }
         binding.lyoConstrain.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_layoutCoinstrainFragment) }
         binding.dayPicker.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_dayPickerFragment) }
