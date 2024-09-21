@@ -53,8 +53,14 @@ dependencies {
 //DaggerHilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-
+//Activity
+//    implementation("androidx.activity:activity-ktx:1.9.2")
+////fragments
+//    implementation("androidx.fragment:fragment-ktx:1.8.3")
+//    //livedata and coroutines
+//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
+//    //viewmodel
+//    implementation("androidx.activity:activity-ktx:1.9.2") // by viewModels()
 //NavComponent
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)

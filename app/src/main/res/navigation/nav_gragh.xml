@@ -80,7 +80,7 @@
         tools:layout="@layout/fragment_chips" />
     <fragment
         android:id="@+id/MVVMFragment"
-        android:name="com.jesse.c24kkgnad.g3.MVVMFragment"
+        android:name="com.jesse.c24kkgnad.g3.mvvm.view.MVVMFragment"
         android:label="fragment_m_v_v_m"
         tools:layout="@layout/fragment_m_v_v_m" />
     <fragment

@@ -3,10 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".g3.MVVMFragment">
+    android:id="@+id/fragment_container"
+    tools:context=".g3.mvvm.view.MVVMFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_quote"
+        style="@style/mySubTitleStyle"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:id="@+id/tv_author"
+        android:padding="16dp"
+        style="@style/mySubTitleStyle"
+        android:gravity="bottom|end"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />

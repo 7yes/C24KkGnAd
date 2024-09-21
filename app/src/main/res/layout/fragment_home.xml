@@ -78,7 +78,7 @@
         />
     <Button
         android:id="@+id/mvvm0"
-        android:text="@id/mvvm0"
+        android:text="MVVM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/lyoFrame"
