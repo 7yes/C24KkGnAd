@@ -1,4 +1,4 @@
-package com.jesse.c24kkgnad.g3.mvvm.view
+package com.jesse.c24kkgnad.g3.mvvm.presentation.view
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.jesse.c24kkgnad.databinding.FragmentMVVMBinding
-import com.jesse.c24kkgnad.g3.mvvm.model.QuoteProvider
-import com.jesse.c24kkgnad.g3.mvvm.viewmodel.QuoteVM
+import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteProvider
+import com.jesse.c24kkgnad.g3.mvvm.presentation.viewmodel.QuoteVM
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

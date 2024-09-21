@@ -1,10 +1,10 @@
-package com.jesse.c24kkgnad.g3.mvvm.viewmodel
+package com.jesse.c24kkgnad.g3.mvvm.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.jesse.c24kkgnad.g3.mvvm.model.QuoteModel
-import com.jesse.c24kkgnad.g3.mvvm.model.QuoteProvider
+import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteModel
+import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

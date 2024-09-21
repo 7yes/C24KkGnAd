@@ -1,4 +1,4 @@
-package com.jesse.c24kkgnad.g3.mvvm.model
+package com.jesse.c24kkgnad.g3.mvvm.data.model
 
 import javax.inject.Inject
 
