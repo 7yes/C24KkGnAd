@@ -76,5 +76,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/dayPicker"
         />
+    <Button
+        android:id="@+id/mvvm0"
+        android:text="@id/mvvm0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/lyoFrame"
+        app:layout_constraintTop_toBottomOf="@id/dayPicker"
+        app:layout_constraintEnd_toStartOf="@id/chips"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/chips"
+        android:text="Chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mvvm0"
+        app:layout_constraintTop_toTopOf="@id/mvvm0"
+        app:layout_constraintEnd_toStartOf="@id/rv"
+        app:layout_constraintBottom_toBottomOf="@id/mvvm0"
+        />
+    <Button
+        android:id="@+id/rv"
+        android:text="RV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/chips"
+        app:layout_constraintTop_toTopOf="@id/mvvm0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mvvm0"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,8 +16,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -35,6 +34,9 @@ class HomeFragment : Fragment() {
         binding.dayPicker.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_dayPickerFragment) }
         binding.timePicker.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_timePickerFragment) }
         binding.perritos.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_perritosFragment) }
+        binding.mvvm0.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_MVVMFragment) }
+        binding.chips.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_chipsFragment) }
+        binding.rv.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_RVAdvFragment) }
     }
 
     override fun onDestroyView() {

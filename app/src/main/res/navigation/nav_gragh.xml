@@ -33,6 +33,15 @@
         <action
             android:id="@+id/action_homeFragment_to_dayPickerFragment"
             app:destination="@id/dayPickerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_RVAdvFragment"
+            app:destination="@id/RVAdvFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_MVVMFragment"
+            app:destination="@id/MVVMFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chipsFragment"
+            app:destination="@id/chipsFragment" />
     </fragment>
     <fragment
         android:id="@+id/layoutCoinstrainFragment"
@@ -64,4 +73,23 @@
         android:name="com.jesse.c24kkgnad.g2.TimePickerFragment"
         android:label="fragment_time_picker"
         tools:layout="@layout/fragment_time_picker" />
+    <fragment
+        android:id="@+id/chipsFragment"
+        android:name="com.jesse.c24kkgnad.g3.ChipsFragment"
+        android:label="fragment_chips"
+        tools:layout="@layout/fragment_chips" />
+    <fragment
+        android:id="@+id/MVVMFragment"
+        android:name="com.jesse.c24kkgnad.g3.MVVMFragment"
+        android:label="fragment_m_v_v_m"
+        tools:layout="@layout/fragment_m_v_v_m" />
+    <fragment
+        android:id="@+id/RVAdvFragment"
+        android:name="com.jesse.c24kkgnad.g3.rv.RVAdvFragment"
+        android:label="fragment_r_v_adv"
+        tools:layout="@layout/fragment_r_v_adv" >
+        <action
+            android:id="@+id/action_RVAdvFragment_self"
+            app:destination="@id/RVAdvFragment" />
+    </fragment>
 </navigation>
