@@ -1,14 +1,13 @@
 package com.jesse.c24kkgnad.g3.mvvm.domain
 
-import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteModel
-import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteProvider
+import com.jesse.c24kkgnad.g3.mvvm.data.QuoteRepository
+import com.jesse.c24kkgnad.g3.mvvm.domain.model.Quote
 import javax.inject.Inject
 
-class GetRandomQuoteUC @Inject constructor(private val quoteProvider: QuoteProvider){
-   // private val quoteRepository = QuoteRepository()
+class GetRandomQuoteUC @Inject constructor(private val repository: QuoteRepository){
 
-    operator fun invoke() : QuoteModel? {
-        val quotes = quoteProvider.quotes
+    suspend operator fun invoke() : Quote? {
+        val quotes = repository.getAllQuotesFromDatabase()
         if (!quotes.isNullOrEmpty()) {
             return quotes[(quotes.indices).random()]
         }

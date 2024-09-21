@@ -78,6 +78,11 @@ dependencies {
     implementation(libs.logging.interceptor)
     implementation(libs.okhttp)
 
+    //Room
+    implementation (libs.androidx.room.ktx) // 2.4.2
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
