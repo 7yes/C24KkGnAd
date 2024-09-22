@@ -1,9 +1,10 @@
-package com.jesse.c24kkgnad.g3.mvvm.data.database.entities
+package com.jesse.c24kkgnad.g3.mvvm.data.database.entities.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.jesse.c24kkgnad.g3.mvvm.data.database.entities.entity.QuoteEntity
 
 @Dao
 interface QuoteDao {

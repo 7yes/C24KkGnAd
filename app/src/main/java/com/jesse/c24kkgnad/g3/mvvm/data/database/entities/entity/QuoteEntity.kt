@@ -1,4 +1,4 @@
-package com.jesse.c24kkgnad.g3.mvvm.data.database.entities
+package com.jesse.c24kkgnad.g3.mvvm.data.database.entities.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -13,4 +13,4 @@ data class QuoteEntity(
     @ColumnInfo(name = "author") val author: String,
 )
 
-fun Quote.toDB()=QuoteEntity(quote = quote, author = author)
+fun Quote.toDB()= QuoteEntity(quote = quote, author = author)

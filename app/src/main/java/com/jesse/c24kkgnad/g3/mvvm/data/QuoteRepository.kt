@@ -1,7 +1,7 @@
 package com.jesse.c24kkgnad.g3.mvvm.data
 
-import com.jesse.c24kkgnad.g3.mvvm.data.database.entities.QuoteDao
-import com.jesse.c24kkgnad.g3.mvvm.data.database.entities.QuoteEntity
+import com.jesse.c24kkgnad.g3.mvvm.data.database.entities.dao.QuoteDao
+import com.jesse.c24kkgnad.g3.mvvm.data.database.entities.entity.QuoteEntity
 import com.jesse.c24kkgnad.g3.mvvm.data.model.QuoteModel
 import com.jesse.c24kkgnad.g3.mvvm.data.network.QuoteService
 import com.jesse.c24kkgnad.g3.mvvm.domain.model.Quote
