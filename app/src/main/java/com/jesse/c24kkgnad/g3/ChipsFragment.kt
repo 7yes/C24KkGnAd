@@ -18,6 +18,9 @@ class ChipsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentChipsBinding.inflate(layoutInflater, container, false)
+        binding.chipGroup.setOnCheckedStateChangeListener { group, checkedIds ->
+            // Respond to change in selection
+        }
         return binding.root
     }
 
