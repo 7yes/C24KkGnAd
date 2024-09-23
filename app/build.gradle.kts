@@ -61,9 +61,6 @@ dependencies {
 //    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
 //    //viewmodel
 //    implementation("androidx.activity:activity-ktx:1.9.2") // by viewModels()
-//NavComponent
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
 
     //NavComponent
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -79,10 +76,12 @@ dependencies {
     implementation(libs.okhttp)
 
     //Room
-    implementation (libs.androidx.room.ktx) // 2.4.2
+    implementation(libs.androidx.room.ktx) // 2.4.2
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
 
+    //Mock
+    testImplementation(libs.mockito.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
