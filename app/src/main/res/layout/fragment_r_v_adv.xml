@@ -6,6 +6,13 @@
     android:orientation="vertical"
     tools:context=".g3.rv.RVAdvFragment">
 
+    <EditText
+        android:id="@+id/etFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:maxLines="1"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_weight="1"

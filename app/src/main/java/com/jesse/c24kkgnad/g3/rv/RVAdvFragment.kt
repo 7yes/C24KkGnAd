@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,13 +37,22 @@ class RVAdvFragment : Fragment() {
         binding.btnAdd.setOnClickListener {
             addSuperHero()
         }
+        binding.etFilter.addTextChangedListener { userFilter ->
+            superheroMutableList.filter { superHeroItem ->
+                superHeroItem.superHero.lowercase().contains(userFilter.toString().lowercase())
+            }.let {
+                adapter.updateList(it)
+            }
+        }
         return binding.root
     }
 
     private fun addSuperHero() {
         superheroMutableList.add(
-            2, SuperHero("Spiderman", "Marvel",
-                "Peter Parker", "https://cursokotlin.com/wp-content/uploads/2017/07/spiderman.jpg")
+            2, SuperHero(
+                "Spiderman", "Marvel",
+                "Peter Parker", "https://cursokotlin.com/wp-content/uploads/2017/07/spiderman.jpg"
+            )
         )
         adapter.notifyItemInserted(2)
         llyomngr.scrollToPositionWithOffset(2, 10)
@@ -71,7 +81,7 @@ class RVAdvFragment : Fragment() {
 
 //Adapter
 class SuperHeroAdapter(
-    private val superHeroList: List<SuperHero>,
+    private var superHeroList: List<SuperHero>,
     private val listener: (SuperHero) -> Unit,
     private val listenerDelete: (Int) -> Unit,
 ) :
@@ -85,6 +95,11 @@ class SuperHeroAdapter(
 
     override fun onBindViewHolder(holder: SuperHeroViewHolder, position: Int) {
         holder.bind(superHeroList[position], listener, listenerDelete)
+    }
+
+    fun updateList(newList: List<SuperHero>) {
+        this.superHeroList = newList
+        notifyDataSetChanged()
     }
 }
 
