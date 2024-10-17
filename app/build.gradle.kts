@@ -80,8 +80,12 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
 
+    //Test Coroutinas
+    testImplementation("org.jetbrains.hotlinx:kotlinx-coroutines-test:1.6.4")
     //Mock
     testImplementation(libs.mockito.core)
+    testImplementation (libs.mockk)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
